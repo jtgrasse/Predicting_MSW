@@ -1,21 +1,25 @@
 # About Dataset
 
-This GitHub repository contains compiled data from published waste characterization studies with intent for training waste composition prediction models. The data is first used in a study published in the journal *Waste Management* https://doi.org/10.1016/j.wasman.2024.12.002
+This GitHub repository contains compiled data from published waste characterization studies with intent for training waste composition prediction models. The data is first used in a study published in the journal *Waste Management* DOI: 10.1016/j.wasman.2024.12.002
 
-## About Data collection methodology
+## Data Collection Methodology
 
-Each of the data points comes from a report called a "Waste Characterization Study." Some reports have multiple data points, such as a data point for each county in a state. The data has been manually extracted from each report PDF by the project team. Furthermore, each datapoint may use a different set of material categories, so the team manually translated the data into the common characterization. This process is described in detail in the aforementioned paper.
+Each data point comes from a report called a "Waste Characterization Study." Some reports provide multiple data points, such as individual data for each county within a state. The data has been manually extracted from each report PDF by the project team. The project team manually extracted this data from the report PDFs. Since different reports often use unique sets of material categories, the team translated the data into a standardized characterization. This process is detailed in the aforementioned paper.
 
-### Description of the data
+### Data Description
 
-The original reports (all of which are PDFs) are contained in the "Characterization Studies Used" folder. These copies are retained, because their location on various government repositories tends to move.
+The original reports (all in PDF format) are contained in the "Characterization Studies Used" folder. These copies are included to ensure accessibility, as their locations on government repositories may change.
 
-The resulting data table has 3 description columns, 43 detailed waste material category columns, and 12 aggregated waste category columns. The description for each datapoint contains the following:
-1. Note - This is a description of the area covered by the data
-2. Year - This is the year that the data was gathered (note: this may not be the year the data was published)
-3. FIPS - This is a list of the FIPS codes associated with the counties that are represented by the data.
+The resulting data table has 3 description columns, 43 detailed waste material category columns, and 12 aggregated waste category columns. Each datapoint contains the following:
+1. Note - This describes the area covered by the data, often matching the verbiage of the original report.
+2. Year - The year that the data was gathered (note: this may be earlier than the year that the data was published).
+3. FIPS - Comma separated list of the FIPS codes of the counties that are represented by the data.
+4. Detailed Material Categories (Columns 4-46) - Each column includes the percentage of the waste stream that is made up by the specified material category.
+5. Aggregated Material Categories (Columns 47-58) - Each column represents a more agregated material category. This breakdown avoids missing values for reports that provide less detailed data.
 
 # Dataset Citation
+
+If you use this dataset, please cite both this data repository as well as the *Waste Management* paper in which the collection and translation methodology is described.
 
 Grassel, J. T., Hasan, K. W., Bingham, D. R., Rengarajan, N., Escobedo, A. R., Rushforth, R. R., Buch, R. (2024). Translated and compiled waste characterization study data. URL: https://github.com/jtgrasse/Predicting_MSW
 
