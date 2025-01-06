@@ -4,7 +4,7 @@ This GitHub repository contains compiled data from published waste characterizat
 
 ## Data Collection Methodology
 
-Each data point comes from a %adjust to match more specific wording% report called a "Waste Characterization Study." Some reports provide multiple data points %be more specific about what one data point is, a composition for a specific area for a specific time%, such as individual data for each county within a state. The project team manually extracted this data from the publicly available report PDFs. Since different reports often use unique sets of material categories, the team translated the data into a standardized characterization. This process is detailed in the aforementioned paper.
+The data available is contained in reports that we refer to as *waste characterization studies*; these reports are often titled similarly. The data is pulled from these reports, where each data point is an estimated percentage breakdown of the waste stream into various material categories for a particular geographic area and for a particular year. Some reports provide multiple data points, such as data for each county within a state. The project team manually extracted this data from the publicly available report PDFs. Since different reports often use unique sets of material categories, the team translated the data into a standardized characterization. This process is detailed in the aforementioned paper.
 
 ### Data Description
 
