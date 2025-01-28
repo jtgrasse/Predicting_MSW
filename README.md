@@ -1,8 +1,10 @@
 # About Dataset
 
-This GitHub repository contains compiled data from published waste characterization studies with intent for training waste composition prediction models. The data is first used in a study published in the journal *Waste Management* DOI: 10.1016/j.wasman.2024.12.002
+This GitHub repository contains compiled data from published waste characterization studies with intent for training waste composition prediction models. The data is first used in a study published in the journal *Waste Management* DOI: 10.1016/j.wasman.2024.12.002. Additionally for reproducibility, this repository includes the predictors (independent data) that were used for training and testing the model described in the aformentioned paper. 
 
-## Data Collection Methodology
+# Municipal Solid Waste Composition Data
+
+## Collection Methodology
 
 The data available is contained in reports that we refer to as *waste characterization studies*; these reports are often titled similarly. The data is pulled from these reports, where each data point is an estimated percentage breakdown of the waste stream into various material categories for a particular geographic area and year. Some reports provide multiple data points, such as data for each county within a state. The project team manually extracted this data from the publicly available report PDFs. Since different reports often use unique sets of material categories, the team translated the data into a standardized characterization. This process is detailed in the aforementioned paper.
 
@@ -50,3 +52,12 @@ Grassel, J. T., Escobedo, A. R., & Buch, R. (2025). Predicting the composition o
   publisher={Elsevier}
 }
 ```
+
+# Independent Variable Data
+
+The data used to train and test the composition prediction model is included in this repository as a ZIP folder. This folder contains two files: "Compiled_Predictors.csv" includes the all the independent variables, and "Prediction_Data_Descriptors.csv" provides detailed information on what the column names represet. This data was compiled from three sources: Bureau of Economic Analysis (BEA),  U.S. Census Bureau, and National Cancer Institute (NCI).
+
+1. YEAR and FIPS - Identifiers for when and where the data applies
+2. BEA Data (Columns 3-86) - This covers a variety of economic data collected from GDP by industry to private income.
+3. U.S. Census Bureau Data (Column 87)
+4. NCI Data (Columns 88-106) - This data breaks down the population into age groups
