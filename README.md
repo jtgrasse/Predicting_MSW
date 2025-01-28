@@ -10,7 +10,7 @@ The data available is contained in reports that we refer to as *waste characteri
 
 ### Data Description
 
-The original reports (all in PDF format) are contained in the "Characterization Studies Used" folder. These copies are included to ensure accessibility, as their locations on government repositories tends to change.
+The original reports (all in PDF format) are contained in the "Characterization Studies Used" ZIP folder. These copies are included to ensure accessibility, as their locations on government repositories tends to change.
 
 The resulting data table has 58 columns: 3 description columns, 43 detailed waste material category columns, and 12 aggregated waste category columns. Each row (i.e., waste characterization datapoint) contains the following:
 
@@ -55,9 +55,13 @@ Grassel, J. T., Escobedo, A. R., & Buch, R. (2025). Predicting the composition o
 
 # Independent Variable Data
 
-The data used to train and test the composition prediction model is included in this repository as a ZIP folder. This folder contains two files: "Compiled_Predictors.csv" includes the all the independent variables, and "Prediction_Data_Descriptors.csv" provides detailed information on what the column names represet. This data was compiled from three sources: Bureau of Economic Analysis (BEA),  U.S. Census Bureau, and National Cancer Institute (NCI).
+The data used to train and test the composition prediction model is included in this repository as a ZIP folder. This folder contains two files: "Compiled_Predictors.csv" includes the all the independent variable data, and "Prediction_Data_Descriptors.csv" provides more detailed information on what the column names represet. This data was compiled from three sources: Bureau of Economic Analysis (BEA),  U.S. Census Bureau, and National Cancer Institute (NCI).
 
-1. YEAR and FIPS - Identifiers for when and where the data applies
-2. BEA Data (Columns 3-86) - This covers a variety of economic data collected from GDP by industry to private income.
-3. U.S. Census Bureau Data (Column 87)
-4. NCI Data (Columns 88-106) - This data breaks down the population into age groups
+1. YEAR and FIPS - Identifiers for when and where the data applies.
+2. BEA Data (Columns 3-86) - This covers a variety of economic data collected by the BEA, ranging from GDP to personal income.
+3. U.S. Census Bureau Data (Column 87) - The "Area" represents the land and water area defined by the FIPS code. Note: this measure was taken in 2000 and was applied to all years.
+4. NCI Data (Columns 88-106) - This estimated data breaks down the population into 19 age groups for each year and each FIPS.
+
+The BEA data was retrieved in 2024 from the interactive tables hosted on the BEA website: https://www.bea.gov/itable/.
+The U.S. Census Bureau data was retrieved in 2024 from the TIGERweb application: https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html.
+The NCI data was retrieved from the SEER county population data posted in 2022: https://seer.cancer.gov/popdata/
